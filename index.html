@@ -3,242 +3,526 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Shahd Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <a href="#home" class="logo"></a>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+  <!-- Floating Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#home" class="logo">
+            <img src="./img/logo3.png" alt="logo" width="60px" height="50px">
+ </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="container hero-content">
-      <div class="hero-text">
-        <h2>Hello, I'm Shahd</h2>
-        <p>A Front-End Developer passionate about clean & creative design.</p>
-        <a href="#projects" class="btn">View My Work</a>
+      <div class="hero-text" data-animate="fade-up">
+        <span class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for work
+        </span>
+        <h1 class="hero-title">
+          Hello, I'm <span class="gradient-text">Shahd</span>
+        </h1>
+        Frontend Developer with Full Stack experience, currently building a large-scale private project.
+I create modern, responsive interfaces with React and connect them to powerful backend systems.        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">7+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Years Exp</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">React</span>
+            <span class="stat-label">Expert</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="img/shahd.png" alt="Shahd's Photo" />
+      <div class="hero-image" data-animate="fade-left">
+        <div class="image-wrapper">
+          <div class="image-glow"></div>
+          <img src="img/shahd.png" alt="Shahd's Photo" />
+          <div class="image-ring"></div>
+        </div>
+        <div class="floating-badge badge-1">
+          <i class="fas fa-code"></i>
+          <span>React</span>
+        </div>
+        <div class="floating-badge badge-2">
+          <i class="fas fa-palette"></i>
+          <span>laravel</span>
+        </div>
       </div>
     </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
+
+  <!-- Projects Section -->
   <section class="projects" id="projects">
     <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <div class="project-card">
-        <img src="img/p1.png" alt="Project 2">
-        <div class="project-content">
-          <h3>Online Shopping App</h3>
-          <p>React-based shopping app with product management, favorites, cart, and category filtering. Built using React Router, Zustand for state management, and React Query with infinite scroll for efficient data fetching. Features secure login/logout and WhatsApp checkout.
-      <br> <span style="color: #7f7b7b;"> <span style=" font-weight: 700; color:#ffffff ;">Sign in:</span> <br> username: emilys <br> password: emilyspass</span>
-          </p>
-          
-          <a href="https://react-products-u4zu.vercel.app/" class="btn" target="_blank">View Project</a>
-         
-        </div>
-      </div>
-     
-        <div class="project-card">
-          <img src="img/p5.png" alt="Project 7">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">My Projects</h2>
+      Some projects include mock API integration and <br>
+       are designed to be easily connected to a real backend.
+     </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-animate="fade-up" data-delay="100">
+          <div class="project-image">
+            <img src="img/p1.png" alt="Online Shopping App">
+            <div class="project-overlay">
+              <a href="https://react-products-u4zu.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
           <div class="project-content">
+            <span class="project-tag">React</span>
+            <h3>Online Shopping App</h3>
+            <p>React-based shopping app with product management, favorites, cart, and category filtering. Features secure login/logout and WhatsApp checkout.</p>
+            <div class="project-tech">
+              <span class="tech-badge">React Router</span>
+              <span class="tech-badge">Zustand</span>
+              <span class="tech-badge">React Query</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-animate="fade-up" data-delay="200">
+          <div class="project-image">
+            <img src="img/p5.png" alt="Perfume Store App">
+            <div class="project-overlay">
+              <a href="https://fragrances-navy.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-tag">React + Redux</span>
             <h3>Perfume Store App</h3>
-            <p>This elegant perfume store app is built with React and features state management for the shopping cart and favorites using Redux. It includes a complete login system to protect user accounts, and users can easily checkout and make payments via WhatsApp. The app also supports product browsing, category filtering, and smooth user interaction for a seamless shopping experience.</p>
-            <a href="https://fragrances-navy.vercel.app/" class="btn" target="_blank">View Project</a>
+            <p>Elegant perfume store with Redux state management, login system, and WhatsApp checkout integration.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Redux</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">WhatsApp API</span>
+            </div>
           </div>
         </div>
-        
-        <div class="project-card">
-          <img src="img/p6.png" alt="Project 8">
+
+        <!-- Project 3 -->
+        <div class="project-card" data-animate="fade-up" data-delay="300">
+          <div class="project-image">
+            <img src="img/p6.png" alt="Game Showcase App">
+            <div class="project-overlay">
+              <a href="https://game-react-2ur2.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
           <div class="project-content">
+            <span class="project-tag">React</span>
             <h3>Game Showcase App</h3>
-            <p>Built with React, this app displays games with a smooth UI, featuring day/night theme toggle, search and filtering. It uses React Query for data fetching, Zustand for state management, and React Router for seamless navigation—focused on enhancing user experience with modern front-end techniques.</p>
-            <a href="https://game-react-2ur2.vercel.app/" class="btn" target="_blank">View Project</a>
+            <p>Game showcase with day/night theme toggle, search, filtering, and modern UI/UX techniques.</p>
+            <div class="project-tech">
+              <span class="tech-badge">React Query</span>
+              <span class="tech-badge">Zustand</span>
+              <span class="tech-badge">React Router</span>
+            </div>
           </div>
         </div>
-        <div class="project-card">
-          <img src="img/p7.png" alt="Project 9">
+
+        <!-- Project 4 -->
+        <div class="project-card" data-animate="fade-up" data-delay="400">
+          <div class="project-image">
+            <img src="img/p7.png" alt="Books Library Website">
+            <div class="project-overlay">
+              <a href="https://project-books-121m.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
           <div class="project-content">
+            <span class="project-tag">Next.js</span>
             <h3>Books Library Website</h3>
-            <p>A fast and modern book website built with Next.js. Features include local search for instant results, the ability to read books directly, and add them to a favorites list for quick access.</p>
-            <a href="https://project-books-121m.vercel.app/" class="btn" target="_blank">View Project</a>
+            <p>Fast and modern book website with local search, direct reading, and favorites functionality.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">API</span>
+              <span class="tech-badge">Local Storage</span>
+            </div>
           </div>
         </div>
-        <div class="project-card">
-          <img src="img/p4.png" alt="Project 6">
+
+        <!-- Project 5 -->
+        <div class="project-card" data-animate="fade-up" data-delay="500">
+          <div class="project-image">
+            <img src="img/p4.png" alt="Tailwind CSS Website">
+            <div class="project-overlay">
+              <a href="https://shahdslaho.github.io/Project_tailwindCss/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
           <div class="project-content">
+            <span class="project-tag">Tailwind CSS</span>
             <h3>Tailwind CSS Website</h3>
-            <p>A responsive website built with Tailwind CSS, featuring a clean layout using Grid and Flexbox for smooth adaptation. Optimized color schemes, spacing, and smooth scroll effects enhance user experience. Tailwind’s utility-first approach ensures fast customization and efficient development with minimal custom CSS.</p>
-            <a href="https://shahdslaho.github.io/Project_tailwindCss/" class="btn" target="_blank">View Project</a>
+            <p>Responsive website with clean layout using Grid and Flexbox, optimized color schemes and smooth effects.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Tailwind</span>
+              <span class="tech-badge">Grid</span>
+              <span class="tech-badge">Flexbox</span>
+            </div>
           </div>
         </div>
-        <div class="project-card">
-          <img src="img/p2.png" alt="Project 4">
+
+        <!-- Project 6 -->
+        <div class="project-card" data-animate="fade-up" data-delay="600">
+          <div class="project-image">
+            <img src="img/p2.png" alt="Coffee Store Website">
+            <div class="project-overlay">
+              <a href="https://shahdslaho.github.io/Project_Coffee/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
           <div class="project-content">
+            <span class="project-tag">HTML/CSS/JS</span>
             <h3>Coffee Store Website</h3>
-            <p>A stylish and interactive coffee store website built with HTML, CSS, and JavaScript. It includes dedicated pages for the menu and products, smooth scrolling, responsive layout, and engaging UI elements to enhance the browsing experience. Designed to be user-friendly and visually appealing across devices.</p>
-            <a href="https://shahdslaho.github.io/Project_Coffee/" class="btn" target="_blank">View Project</a>
+            <p>Stylish and interactive coffee store with dedicated menu pages, smooth scrolling, and engaging UI elements.</p>
+            <div class="project-tech">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
           </div>
-        </div>      
-        <div class="project-card">
-          <img src="img/p3.png" alt="Project 5">
-          <div class="project-content">
-            <h3>iPhone Showcase Website</h3>
-            <p>A sleek and modern website built with HTML, CSS, and JavaScript to showcase iPhone models, upgrades, and pricing. Inspired by Apple’s clean design, it offers smooth transitions, responsive layout, and interactive effects for an engaging and fast browsing experience across all devices.</p>
-            <a href="https://shahdslaho.github.io/Project-Iphone/" class="btn" target="_blank">View Project</a>
-          </div>
-        </div>        
+        </div>
+
+        <!-- Project 7 -->
+       
       </div>
     </div>
   </section>
+
+  <!-- Skills Section -->
   <section class="skills" id="skills">
     <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Expertise</span>
         <h2 class="section-title">My Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend Development</h3>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fab fa-html5"></i>
-                        <span class="skill-name">HTML5</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fab fa-css3-alt"></i>
-                        <span class="skill-name">CSS3</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fab fa-js"></i>
-                        <span class="skill-name">JavaScript</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fab fa-react"></i>
-                        <span class="skill-name">React</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%"></div>
-                    </div>
-                </div>
+        <p class="section-desc">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Skill Card 1 -->
+        <div class="skill-card" data-animate="fade-up" data-delay="100">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="skill-info">
+            <h3>HTML5</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="95">
+                <span class="skill-percent">95%</span>
+              </div>
             </div>
-            
-            <div class="skill-category">
-                <h3>Design Skills</h3>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <span class="skill-name">UI/UX Design</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span class="skill-name">Responsive Design</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 88%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <i class="fas fa-magic"></i>
-                        <span class="skill-name">Web Animation</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%"></div>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div class="skill-card" data-animate="fade-up" data-delay="200">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="skill-info">
+            <h3>CSS3</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90">
+                <span class="skill-percent">90%</span>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<section id="contact" class="contact">
-  <div class="contact-container">
-    <h2 class="section-title">Let's Work Together</h2>
-    <div class="contact-text">
-      <p>Whether you have a question or just want to say hi, feel free to reach out!</p>
-    </div>
-    <div class="social-links">
-      <a href="tel:+6238159979459" class="social-item">
-        <div class="social-icon"><i class="fas fa-phone"></i></div>
-        <div class="social-label">
-          <h4>Phone</h4>
-          <span>+6238159979459</span>
-        </div>
-      </a>
 
-      <a href="https://t.me/ShahdSlaho" target="_blank" class="social-item">
-        <div class="social-icon"><i class="fab fa-telegram"></i></div>
-        <div class="social-label">
-          <h4>Telegram</h4>
-          <span>@ShahdSlaho</span>
+        <!-- Skill Card 3 -->
+        <div class="skill-card" data-animate="fade-up" data-delay="300">
+          <div class="skill-icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="85">
+                <span class="skill-percent">85%</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </a>
 
-      <a href="https://www.facebook.com/share/1GoR96QXM3/" target="_blank" class="social-item">
-        <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
-        <div class="social-label">
-          <h4>Facebook</h4>
-          <span>Shahd Slaho</span>
+        <!-- Skill Card 4 -->
+        <div class="skill-card" data-animate="fade-up" data-delay="400">
+          <div class="skill-icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="skill-info">
+            <h3>React</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="80">
+                <span class="skill-percent">80%</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </a>
 
-      <a href="https://github.com/shahdslaho" target="_blank" class="social-item">
-        <div class="social-icon"><i class="fab fa-github"></i></div>
-        <div class="social-label">
-          <h4>GitHub</h4>
-          <span>@shahdslaho</span>
+        <!-- Skill Card 5 -->
+        <div class="skill-card" data-animate="fade-up" data-delay="500">
+          <div class="skill-icon">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="skill-info">
+            <h3>UI/UX Design</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="90">
+                <span class="skill-percent">90%</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </a>
 
-      <a href="https://www.instagram.com/shahdsalaho" target="_blank" class="social-item">
-        <div class="social-icon"><i class="fab fa-instagram"></i></div>
-        <div class="social-label">
-          <h4>Instagram</h4>
-          <span>@shahdsalaho</span>
+        <!-- Skill Card 6 -->
+        <div class="skill-card" data-animate="fade-up" data-delay="600">
+          <div class="skill-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="skill-info">
+            <h3>Responsive Design</h3>
+            <div class="skill-bar">
+              <div class="skill-progress" data-progress="88">
+                <span class="skill-percent">88%</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </a>
-
-      <a href="mailto:shahdslaho00@gmail.com" class="social-item">
-        <div class="social-icon"><i class="fas fa-envelope"></i></div>
-        <div class="social-label">
-          <h4>Email</h4>
-          <span>shahdslaho00@gmail.com</span>
-        </div>
-      </a>
+        <!-- Skill Card 7 -->
+<div class="skill-card" data-animate="fade-up" data-delay="700">
+  <div class="skill-icon">
+    <i class="fab fa-laravel"></i>
+  </div>
+  <div class="skill-info">
+    <h3>Laravel</h3>
+    <div class="skill-bar">
+      <div class="skill-progress" data-progress="85">
+        <span class="skill-percent">85%</span>
+      </div>
     </div>
   </div>
-</section>
-</body>
-</html>
+</div>
+
+<!-- Skill Card 8 -->
+<div class="skill-card" data-animate="fade-up" data-delay="800">
+  <div class="skill-icon">
+    <i class="fas fa-database"></i>
+  </div>
+  <div class="skill-info">
+    <h3>MySQL</h3>
+    <div class="skill-bar">
+      <div class="skill-progress" data-progress="80">
+        <span class="skill-percent">80%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skill Card 9 -->
+<div class="skill-card" data-animate="fade-up" data-delay="900">
+  <div class="skill-icon">
+    <i class="fas fa-server"></i>
+  </div>
+  <div class="skill-info">
+    <h3>REST APIs</h3>
+    <div class="skill-bar">
+      <div class="skill-progress" data-progress="85">
+        <span class="skill-percent">85%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skill Card 10 -->
+<div class="skill-card" data-animate="fade-up" data-delay="1000">
+  <div class="skill-icon">
+    <i class="fas fa-lock"></i>
+  </div>
+  <div class="skill-info">
+    <h3>Authentication & Security</h3>
+    <div class="skill-bar">
+      <div class="skill-progress" data-progress="80">
+        <span class="skill-percent">80%</span>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-desc">Feel free to reach out for collaborations or just a friendly hello</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="tel:+6238159979459" class="contact-card" data-animate="fade-up" data-delay="100">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info">
+            <h4>Phone</h4>
+            <span>+6238159979459</span>
+          </div>
+          <div class="contact-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+
+        <a href="https://t.me/ShahdSlaho" target="_blank" class="contact-card" data-animate="fade-up" data-delay="200">
+          <div class="contact-icon telegram">
+            <i class="fab fa-telegram"></i>
+          </div>
+          <div class="contact-info">
+            <h4>Telegram</h4>
+            <span>@ShahdSlaho</span>
+          </div>
+          <div class="contact-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+
+        <a href="https://www.facebook.com/share/1GoR96QXM3/" target="_blank" class="contact-card" data-animate="fade-up" data-delay="300">
+          <div class="contact-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="contact-info">
+            <h4>Facebook</h4>
+            <span>Shahd Slaho</span>
+          </div>
+          <div class="contact-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+
+        <a href="https://github.com/shahdslaho" target="_blank" class="contact-card" data-animate="fade-up" data-delay="400">
+          <div class="contact-icon github">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-info">
+            <h4>GitHub</h4>
+            <span>@shahdslaho</span>
+          </div>
+          <div class="contact-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/shahdsalaho" target="_blank" class="contact-card" data-animate="fade-up" data-delay="500">
+          <div class="contact-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="contact-info">
+            <h4>Instagram</h4>
+            <span>@shahdsalaho</span>
+          </div>
+          <div class="contact-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+
+        <a href="/cdn-cgi/l/email-protection#d9aab1b8b1bdaab5b8b1b6e9e999beb4b8b0b5f7bab6b4" class="contact-card" data-animate="fade-up" data-delay="600">
+          <div class="contact-icon email">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info">
+            <h4>Email</h4>
+            <span><span class="__cf_email__" data-cfemail="fd8e959c95998e919c9592cdcdbd9a909c9491d39e9290">[email&#160;protected]</span></span>
+          </div>
+          <div class="contact-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+        
+  <img src="./img/logo3.png" alt="logo" width="70px" height="60px">
+
+          <p>Front-End Developer crafting beautiful digital experiences</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Shahd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script src="script.js"></script>
+
+<script>
